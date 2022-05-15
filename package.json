@@ -10,7 +10,8 @@
     "lint": "eslint src --max-warnings=0",
     "postinstall": "husky install",
     "prepare": "husky install",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "yarn test --watch"
   },
   "dependencies": {
     "next": "12.1.6",
@@ -24,11 +25,13 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "yarn lint --fix"
+      "yarn lint --fix", "yarn test --bail"
     ]
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.16.7",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
     "@types/babel__core": "^7.1.19",
     "@types/babel__generator": "^7.6.4",
     "@types/jest": "^27.5.1",
@@ -44,6 +47,7 @@
     "eslint-plugin-react-hooks": "^4.5.0",
     "husky": "^8.0.0",
     "jest": "^28.1.0",
+    "jest-environment-jsdom": "^28.1.0",
     "lint-staged": "^12.4.1",
     "pins": "^0.1.0",
     "prettier": "^2.6.2",
