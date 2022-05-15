@@ -8,7 +8,8 @@
     "start": "next start",
     "nextLink": "next link",
     "lint": "eslint src --max-warnings=0",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "12.1.6",
@@ -31,7 +32,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.5.0",
-    "husky": "^8.0.1",
+    "husky": "^8.0.0",
     "lint-staged": "^12.4.1",
     "pins": "^0.1.0",
     "prettier": "^2.6.2",
